@@ -33,8 +33,9 @@ namespace WebApplication1.Controllers
 
         // POST api/<Prestamos>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Prestamos prestamos )
         {
+            bool paso = PrestamosBLL.Guardar(prestamos);
         }
 
         // PUT api/<Prestamos>/5
@@ -45,8 +46,9 @@ namespace WebApplication1.Controllers
 
         // DELETE api/<Prestamos>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public bool Delete(int id)
         {
+            return PrestamosBLL.Eliminar(id);
         }
     }
 }
