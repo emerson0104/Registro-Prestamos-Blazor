@@ -271,35 +271,34 @@
 
     private void Guardar()
 
-    {
+  {
 
         bool paso;
 
-        paso = PrestamosBLL.Guardar(prestamo);
+       paso = PrestamosBLL.Guardar(prestamo);
 
 
 
-        if (paso)
+    if (paso)
 
-        {
+      {
 
-            Nuevo();
+        Nuevo();
 
-            toast.ShowSuccess("Guardado correctamente");
+           toast.ShowSuccess("Guardado correctamente");
+   }
 
-        }
+      else
 
-        else
+     {
 
-        {
+    toast.ShowError("No fue posible guardar");
 
-            toast.ShowError("No fue posible guardar");
-
-        }
-
+     }
 
 
-    }
+
+   }
 
 
 

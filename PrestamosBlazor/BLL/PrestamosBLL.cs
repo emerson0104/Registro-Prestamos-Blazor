@@ -52,6 +52,9 @@ namespace PrestamosBlazor.BLL
 
 
         }
+
+    
+
         public static bool Guardar(Prestamos prestamo)
 
         {
@@ -70,6 +73,24 @@ namespace PrestamosBlazor.BLL
 
 
 
+        public static List<Prestamos> Getprestamos()
+        {
+            List<Prestamos> lista = new List<Prestamos>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                lista = contexto.Prestamos.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
+        }
         private static bool Insertar(Prestamos prestamo)
 
                 {

@@ -39,9 +39,9 @@ namespace PrestamosBlazor.BLL.Tests
 
             pre.Balance = 100;
 
-            bool paso = PrestamosBLL.Guardar(pre);
+          //  bool paso = PrestamosBLL.GU(pre);
 
-            Assert.AreEqual(paso, true);
+       //     Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]
